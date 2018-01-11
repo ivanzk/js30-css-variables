@@ -1,0 +1,95 @@
+:root {
+	--borderColor: #000;
+	--brightness: 1;
+	--contrast: 1;
+	--grayscale: 0;
+	--saturate: 1;
+	--sepia: 0;
+	--invert: 0;
+	--hue: 0;
+	--blur: 0;
+	--opacity: 1;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #03A9F4;
+	font-family: sans-serif;
+	height: 100%;
+	margin: 0px;
+	cursor: default;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	align-items: center;
+	align-content: center;
+}
+
+main {
+	height: 100%;
+}
+
+.img-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.img-frame {
+	display: flex;
+	border: 4px solid var(--borderColor);
+	border-radius: 8px;
+	box-shadow: 0px 4px 16px 4px #212121;
+}
+
+img {
+	max-width: 100%;
+	filter: 
+		brightness(var(--brightness))
+		contrast(var(--contrast))
+		grayscale(var(--grayscale))
+		saturate(var(--saturate))
+		sepia(var(--sepia))
+		opacity(var(--opacity))
+		blur(var(--blur))
+		hue-rotate(var(--hue))
+		invert(var(--invert));
+}
+
+.controls {
+	margin: 0px auto;
+	padding: 16px;
+	max-width: 400px;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0px 2px 8px 0px #212121;
+	opacity: .85;
+}
+
+.controls-wrapper {
+	margin-top: 32px;
+}
+
+.input-group {
+	margin: 8px auto;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	align-items: center;
+	padding-right: 16px;
+}
+
+label {
+	margin-right: 16px;
+}
+
+input {
+	width: 100%;
+	margin-left: 16px;
+	cursor: pointer;
+}

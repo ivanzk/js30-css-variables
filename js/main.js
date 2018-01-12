@@ -3,6 +3,7 @@ const controls = document.querySelectorAll('.input-controls');
 controls.forEach(input => {
 	input.addEventListener('change', handleUpdate);
 	input.addEventListener('mousemove', handleUpdate);
+	input.addEventListener('touchmove', handleUpdate);
 });
 
 	
